@@ -1,0 +1,43 @@
+.menu {
+    margin-bottom: 2rem;
+    text-align: right;
+    font-size: 5vw;
+
+    @include mq(m) {
+        margin-bottom: 0;
+        grid-area: menu;
+        font-size: 1.5rem;
+    }
+
+    ul {
+        @include mq(m) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        @include mq(l) {
+            display: block;
+        }
+        
+    }
+
+    li { list-style: none;}
+
+    a {
+        display: block;
+        font-size: 4vw;
+        padding: 0 0.35em;
+
+        &:hover {
+            color: var(--main-color);
+            background-color: var(--alternate-color);
+        }
+
+        @include mq(m) {
+            font-size: inherit;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.logo {
+	position: fixed;
+	z-index: var(--z-fixed);
+	top: var(--logo-spacing);
+	left: var(--logo-spacing);
+	width: var(--logo-width);
+	height: var(--logo-height);
+	border-radius: 50%;
+	background-color: var(--alternate-color);
+
+	@include mq(m) {
+		position: absolute;
+		width: var(--header-height);
+		height: var(--header-height);
+		grid-area: logo;
+	}
+}
+
+.title {
+	margin: 2rem 0;
+	font-size: 4vw;
+	color: var(--main-color);
+
+	* {
+        margin-bottom: 4rem;
+
+        @include mq(m) {
+            margin-bottom: initial;
+        }
+	}
+
+	small {
+		text-transform: uppercase;
+	}
+
+	@include mq(m) {
+        grid-area: title;
+        align-self: center;
+        margin: 0;
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
+    @include mq(l) {
+        margin-top: 4rem;
+        flex-grow: 1;
+    }
+}

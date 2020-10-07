@@ -1,0 +1,51 @@
+/***** Custom Properties *****/
+
+:root {
+
+    --z-back: -10;
+	--z-normal: 1;
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
+
+    --main-font: 'Raleway';
+    --alternate-font: sans-serif;
+    --font-size: 16px;
+    --line-height: 1.6;
+
+    --main-color: #fff;
+    --main-modal-color: rgb(255, 255, 255, .75);
+    --second-color: #000;
+    --second-modal-color: rgba(#000, .75);
+    --alternate-color: #39B5FA;
+    --alternate-modal-color: rgb(57, 181, 74, .75);
+
+    --bg-color: var(--main-color);
+    --bg-modal-color: var(--main-modal-color);
+    --bg-alternate-color: #999;
+    --bg-alternate-modal-color: rgba(153, 153, 153, .75);
+    --border-color: #ddd;
+
+    --text-color: #242424;
+    --title-color: #333;
+
+    --link-color: var(--alternate-color);
+    --link-hover-color: var(--alternate-modal-color);
+
+    --max-width: 1200px;
+    --header-height: 5rem;
+
+    --logo-width: 4rem;
+    --logo-height: 4rem;
+    --logo-spacing: .5rem;
+}
+
+/***** Variables SASS *****/
+$breakpoints: (
+    xs: 30em, /* 480px */
+    s: 37.5em, /* 600px */
+    m: 45em, /* 720px */
+    l: 64em, /* 1024px */
+    xl: 75em, /* 1200px */
+);
+
