@@ -1,0 +1,27 @@
+.form {
+    * { margin-bottom: .5rem; }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: .5rem;
+        width: 100%;
+        display: block;
+        border: thin solid var(--alternate-color);
+        border-radius: .25rem;
+        font-size: 1rem;
+        font-family: var(--main-font);
+        transition: all .3s ease-out;
+    }
+
+    button {
+        @extend .message;
+        display: block;
+        background-color: var(--alternate-modal-color);
+        border: none;
+        border-radius: 5px;
+        padding: .35em .75em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

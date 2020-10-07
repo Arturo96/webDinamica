@@ -1,0 +1,24 @@
+.photos {
+    @extend .responsiveGrid;
+
+    figure {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        background-color: var(--border-color);
+        
+    }
+
+    figcaption {
+        padding: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        color: var(--alternate-color);
+        background-color: var(--second-color);
+    }
+}

@@ -1,0 +1,80 @@
+.about {
+	margin: 0 auto;
+	max-width: 1024px;
+
+	&-info {
+		@extend .message;
+		width: 80%;
+		margin: 4rem auto;
+		text-align: left;
+	}
+
+	&-flow {
+		width: 90%;
+		margin: 2rem auto;
+
+		div {
+			margin-bottom: 4rem;
+			display: grid;
+			grid-template-columns: 4rem 1fr;
+			grid-template-rows: repeat(2, auto);
+			grid-template-areas:
+				"h2 h3"
+				" . p ";
+			grid-gap: 2vw;
+			align-items: baseline;
+
+			@include mq(l) {
+				grid-gap: 1vw;
+			}
+		}
+
+		h2 {
+			grid-area: h2;
+			color: var(--title-color);
+			font-size: 10vw;
+			@include mq(l) {
+				font-size: 5rem;
+			}
+		}
+
+		h3 {
+			grid-area: h3;
+			color: var(--title-color);
+			font-size: 5vw;
+			@include mq(l) {
+				font-size: 2.5rem;
+			}
+		}
+
+		p {
+			grid-area: p;
+			font-size: 4vw;
+			@include mq(s) {
+				font-size: 3.5vw;
+			}
+			@include mq(m) {
+				font-size: 3vw;
+			}
+			@include mq(l) {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+.contact {
+	display: flex;
+	margin: 0 auto;
+	max-width: 90%;
+	align-items: center;
+	min-height: calc(100vh - var(--header-height));
+
+	@include mq(m) {
+		min-height: calc(100vh - var(--header-height) - 2rem);
+	}
+
+	form {
+		width: 100%;
+	}
+}
